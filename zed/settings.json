@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+	"edit_predictions": {
+		"mode": "subtle",
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null
+		},
+		"enabled_in_assistant": false
+	},
 	"ssh_connections": [
 		{
 			"host": "romulus",
@@ -29,15 +37,15 @@
 	"relative_line_numbers": true,
 	"features": {
 		"edit_prediction_provider": "zed",
-		"copilot": false
+		"copilot": true
 	},
 	"jupyter": {
 		"enabled": false
 	},
 	"assistant": {
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "o3-mini"
+			"provider": "zed.dev",
+			"model": "claude-3-7-sonnet-latest"
 		},
 		"version": "2",
 		"enabled": true,

@@ -13,7 +13,7 @@
 			"proxy": null,
 			"proxy_no_verify": null
 		},
-		"enabled_in_assistant": false
+		"enabled_in_text_threads": false
 	},
 	"ssh_connections": [
 		{
@@ -42,15 +42,29 @@
 	"jupyter": {
 		"enabled": false
 	},
-	"assistant": {
-		"default_model": {
-			"provider": "zed.dev",
-			"model": "claude-3-7-sonnet-latest"
+	"agent": {
+		"default_profile": "write",
+  "always_allow_tool_actions": false,
+  "inline_assistant_model": {
+			"provider": "openai",
+			"model": "gpt-5"
 		},
-		"version": "2",
+		"default_model": {
+			"provider": "openai",
+			"model": "gpt-5"
+		},
 		"enabled": true,
 		"dock": "right",
 		"button": true
+	},
+	"context_servers": {
+		"mcp-server-context7": {
+   "source": "extension",
+   "enabled": true,
+   "settings": {
+    "default_minimum_tokens": "10000"
+   }
+  }
 	},
 	"outline_panel": {
 		"dock": "left",

@@ -1,28 +1,50 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
-	{
-		"context": "Workspace",
-		"bindings": {
-			"cmd-b": "workspace::ToggleLeftDock",
-			// "shift shift": "file_finder::Toggle"
-			"alt-,": "pane::ActivatePreviousItem",
-			"alt-.": "pane::ActivateNextItem",
-			"cmd-shift-b": "workspace::ToggleRightDock",
-			"cmd-r": "vim::Redo"
-		}
-	},
 	{
 		"context": "Editor && vim_mode == visual",
 		"bindings": {
 			"K": "editor::MoveLineUp",
 			"J": "editor::MoveLineDown"
 			// "j k": ["workspace::SendKeystrokes", "escape"]
+		}
+	},
+	{
+		"bindings": {
+			"alt-.": "pane::ActivateNextItem",
+			"alt-,": "pane::ActivatePreviousItem"
+		}
+	},
+	// MacOS Specific Keybindings
+	{
+		"context": "(os == macos && Workspace)",
+		"bindings": {
+			"cmd-b": "workspace::ToggleLeftDock",
+			"cmd-shift-b": "workspace::ToggleRightDock",
+			"cmd-r": "vim::Redo"
+		}
+	},
+	{
+		"context": "os == macos",
+		"bindings": {
+			"cmd-a": "editor::SelectAll",
+			"cmd-w": "pane::CloseActiveItem",
+			"cmd-j": "workspace::ToggleBottomDock"
+		}
+	},
+	// Windows Specific Keymap
+	{
+		"context": "os == windows",
+		"bindings": {
+			"ctrl-b": "workspace::ToggleLeftDock",
+			"ctrl-shift-b": "workspace::ToggleRightDock",
+			"ctrl-r": "vim::Redo"
+		}
+	},
+	{
+		"context": "os == windows",
+		"bindings": {
+			"ctrl-a": "editor::SelectAll",
+			"ctrl-w": "pane::CloseActiveItem",
+			"ctrl-j": "workspace::ToggleBottomDock"
 		}
 	}
 ]

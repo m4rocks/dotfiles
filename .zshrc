@@ -131,3 +131,6 @@ export PATH="/Users/notangelmario/.codeium/windsurf/bin:$PATH"
 
 # bun completions
 [ -s "/Users/notangelmario/.bun/_bun" ] && source "/Users/notangelmario/.bun/_bun"
+
+# Added by Antigravity
+export PATH="/Users/m4rocks/.antigravity/antigravity/bin:$PATH"

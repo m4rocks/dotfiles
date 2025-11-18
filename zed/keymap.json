@@ -17,8 +17,7 @@
 	{
 		"context": "(os == macos && Workspace)",
 		"bindings": {
-			"cmd-b": "workspace::ToggleLeftDock",
-			"cmd-shift-b": "workspace::ToggleRightDock",
+			"cmd-b": "workspace::ToggleRightDock",
 			"cmd-r": "vim::Redo"
 		}
 	},
@@ -34,8 +33,7 @@
 	{
 		"context": "os == windows",
 		"bindings": {
-			"ctrl-b": "workspace::ToggleLeftDock",
-			"ctrl-shift-b": "workspace::ToggleRightDock",
+			"ctrl-b": "workspace::ToggleRightDock",
 			"ctrl-r": "vim::Redo"
 		}
 	},

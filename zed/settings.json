@@ -86,7 +86,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Gruvbox Light Hard",
-		"dark": "macOS Classic Dark"
+		"dark": "One Black"
 	},
 	"lsp": {
 		"discord_presence": {

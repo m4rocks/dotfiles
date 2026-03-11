@@ -36,15 +36,11 @@
 	"show_edit_predictions": true,
 	"base_keymap": "VSCode",
 	"relative_line_numbers": "enabled",
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
 	"jupyter": {
 		"enabled": false
 	},
 	"agent": {
 		"default_profile": "write",
-		"always_allow_tool_actions": false,
 		"inline_assistant_model": {
 			"provider": "openai",
 			"model": "gpt-5"
@@ -66,8 +62,8 @@
 		"dock": "right"
 	},
 	"vim_mode": true,
-	"ui_font_size": 12,
-	"buffer_font_size": 12,
+	"ui_font_size": 14,
+	"buffer_font_size": 14,
 	"buffer_font_family": "Monocraft",
 	"ui_font_family": "Monocraft",
 	"project_panel": {
@@ -86,7 +82,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Gruvbox Light Hard",
-		"dark": "One Black"
+		"dark": "Gruvbox Material"
 	},
 	"lsp": {
 		"discord_presence": {

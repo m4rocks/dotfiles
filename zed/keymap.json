@@ -31,14 +31,14 @@
 	},
 	// Windows Specific Keymap
 	{
-		"context": "os == windows",
+		"context": "os == windows || os == linux",
 		"bindings": {
 			"ctrl-b": "workspace::ToggleRightDock",
 			"ctrl-r": "vim::Redo"
 		}
 	},
 	{
-		"context": "os == windows",
+		"context": "os == windows || os == linux",
 		"bindings": {
 			"ctrl-a": "editor::SelectAll",
 			"ctrl-w": "pane::CloseActiveItem",

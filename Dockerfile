@@ -23,7 +23,7 @@ RUN useradd -m -s /bin/zsh m4rocks \
     && echo "m4rocks ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/m4rocks \
     && chmod 0440 /etc/sudoers.d/m4rocks
 
-USER m4rocks
+USER devbase
 
 # Install Oh My Zsh (unattended)
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -31,21 +31,21 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 # Install Bun
 RUN curl -fsSL https://bun.sh/install | bash
 
-ENV PATH="/home/m4rocks/.bun/bin:$PATH"
+ENV PATH="/home/devbase/.bun/bin:$PATH"
 
 # Copy your .zshrc (overwrites the one Oh My Zsh generated)
-COPY --chown=m4rocks:m4rocks .zshrc /home/m4rocks/.zshrc
+COPY --chown=devbase:devbase .zshrc /home/devbase/.zshrc
 
 # Make sure .zshrc has linux line endings
-RUN sed -i 's/\r//' /home/m4rocks/.zshrc
+RUN sed -i 's/\r//' /home/devbase/.zshrc
 
 # Fix GPG
-RUN mkdir -p /home/m4rocks/.gnupg \
-    && chmod 700 /home/m4rocks/.gnupg
+RUN mkdir -p /home/devbase/.gnupg \
+    && chmod 700 /home/devbase/.gnupg
 
 # Trust directory for Git
 RUN git config --global --add safe.directory "*"
 
-WORKDIR /home/m4rocks
+WORKDIR /home/devbase
 
 CMD ["/bin/zsh"]

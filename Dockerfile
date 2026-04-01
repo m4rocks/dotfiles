@@ -41,8 +41,10 @@ RUN sed -i 's/\r//' /home/m4rocks/.zshrc
 
 # Fix GPG
 RUN mkdir -p /home/m4rocks/.gnupg \
-    && echo "no-autostart" > /home/m4rocks/.gnupg/gpg-agent.conf \
     && chmod 700 /home/m4rocks/.gnupg
+
+# Trust directory for Git
+RUN git config --global --add safe.directory "*"
 
 WORKDIR /home/m4rocks
 

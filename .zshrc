@@ -126,11 +126,11 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
-# Added by Windsurf
-export PATH="/Users/notangelmario/.codeium/windsurf/bin:$PATH"
-
 # bun completions
 [ -s "/Users/notangelmario/.bun/_bun" ] && source "/Users/notangelmario/.bun/_bun"
 
-# Added by Antigravity
-export PATH="/Users/m4rocks/.antigravity/antigravity/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/m4rocks/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

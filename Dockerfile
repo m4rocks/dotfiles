@@ -39,6 +39,11 @@ COPY --chown=m4rocks:m4rocks .zshrc /home/m4rocks/.zshrc
 # Make sure .zshrc has linux line endings
 RUN sed -i 's/\r//' /home/m4rocks/.zshrc
 
+# Fix GPG
+RUN mkdir -p /home/m4rocks/.gnupg \
+    && echo "no-autostart" > /home/m4rocks/.gnupg/gpg-agent.conf \
+    && chmod 700 /home/m4rocks/.gnupg
+
 WORKDIR /home/m4rocks
 
 CMD ["/bin/zsh"]
